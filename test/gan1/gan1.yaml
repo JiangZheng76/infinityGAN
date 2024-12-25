@@ -1,0 +1,68 @@
+width: 100
+data_params:
+  num_valid: 2000
+  num_train: 12000
+  dataset: gan
+batch_size: 1
+height: 100
+save_path: ./
+interactive: False
+log_params:
+  log_tick: 100
+  img_tick: 3000
+  save_tick: 3000
+  fid_ext2_tick: 45000
+  n_save_sample: 64
+  eval_tick: 15000
+num_gen: 1
+task_manager: test_managers.infinite_generation.InfiniteGenerationManager
+lowres_height: 128
+test_params:
+  n_fid_sample: 50000
+  calc_fid_ext2: True
+  calc_fid: True
+ckpt: /home/sysu/build-GanProject-Desktop-Debug/ckpt/best_fid.pth.tar
+seed: 1000
+train_params:
+  ts_no_zero_pad: True
+  ts_input_size: 11
+  training_modality: patch
+  stylegan2_baseline: False
+  styleGAN2_baseline: False
+  ss_n_layers: 4
+  path_regularize: 2
+  path_batch_shrink: 2
+  coord_vert_sample_size: 10
+  coord_vert_cut_pt: 3
+  use_ss: True
+  coord_continuous: True
+  coord_use_ac: True
+  ss_unfold_radius: 3
+  coord_hori_occupy_ratio: 0.25
+  coord_num_dir: 3
+  coord_ac_w: 1
+  global_latent_dim: 512
+  coord_ac_vert_only: True
+  r1: 10
+  diversity_dual: True
+  channel_multiplier: 2
+  ss_disable_noise: True
+  iter: 800000
+  coord_use_pd: False
+  d_arch: models.stylegan2discriminator.StyleGan2Discriminator
+  batch_size: 16
+  ss_coord_all_layers: True
+  data_size: 1024
+  lr: 0.002
+  d_reg_every: 16
+  n_mlp: 8
+  diversity_angular: True
+  diversity_z_w: 1
+  extra_pre_resize: 128
+  local_latent_dim: 256
+  full_size: 197
+  g_arch: models.infinitygan_generator.InfinityGanGenerator
+  g_reg_every: 4
+  coord_pd_w: 0
+  mixing: 0.9
+  patch_size: 101

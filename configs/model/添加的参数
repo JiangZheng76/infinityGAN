@@ -1,0 +1,13 @@
+添加的参数
+train_params.global_latent_dim: 512
+train_params.local_latent_dim: 256
+train_params.n_mlp: 8 # 可以是使用的参数
+interactive: False # 实时显示出来
+train_params.styleGAN2_baseline: False
+train_params.use_ss: True
+train_params.coord_continuous: True
+train_params.coord_use_ac: True
+train_params.coord_use_pd: False
+
+train_params.ss_coord_all_layers: True # 可以是使用的参数
+train_params.ss_disable_noise: True # 可以是使用的参数
